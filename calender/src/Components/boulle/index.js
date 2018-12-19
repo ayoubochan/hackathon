@@ -37,10 +37,12 @@ class Boule extends Component {
             <div className={this.state.open ? 'cercle' : 'close'}>
                 <div className="App-cercle">
                     <button className="btn" onClick={() => this.handleClickoff()}>Press</button>
-                    <ul className="url">
-                        <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange} />
-                        </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
-                    </ul>
+                    <div>
+                        <ul className="url">
+                            <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange} />
+                            </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
+                        </ul>
+                    </div>
                 </div>
                 <button className="btn1" onClick={() => this.handleClickon()}>Press</button>
             </div>

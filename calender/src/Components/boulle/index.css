@@ -17,9 +17,22 @@
   z-index: 2;
 }
 
+.cercle div {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
 .close .url {
   display: none;
 }
+
+.btn {
+  position: fixed;
+  right: 400px;
+  top: 100px;
+}
+
 .close .btn {
   display: none;
   
