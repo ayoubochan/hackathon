@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import Boulle from "../Boulle/index"
+import Boulle from "../../Components/boulle/index"
 
 const Boules = [
     {},

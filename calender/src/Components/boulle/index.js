@@ -1,8 +1,8 @@
-import React, {Component} from react;
+import React, {Component} from "react"
 
 class Boulle extends Component{
     constructor(props){
-        super.props();
+        super(props);
         this.state={
             lienMusique: "",
         }
@@ -17,11 +17,10 @@ handleChange(event){
 handleClick(elem){
     this.props.activateUrl(elem);
 }
-<Boulle recupURL= recupURL()/>
 
     render(){
     const BoulleAdd = <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange}></input>
-    </label><input type="submit" value="Valider" onClick={() =>this.handleClick(this.state.lienMusique)}> </li>;
+    </label><input type="submit" value="Valider" onClick={() =>this.handleClick(this.state.lienMusique)}> </input> </li>;
 
         return(
             {BoulleAdd}
