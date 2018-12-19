@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import Popup from './components/Popup/index';
 import Boule from './Components/boulle/index';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Popup />
         <Boule />
         <h1 className="title-calender"> The Jingle Blank Test</h1>
         <p className="sub-title">A little quiz every day until Christmas</p>
