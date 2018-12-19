@@ -13,7 +13,7 @@ handleChange(event){
     this.setState({lienMusique :event.target.value});
 }
     
-    componentDidMount(){
+    componentDidUpdate(){
         //this.props
         //renvoyer le state au parent (Liste boulles)
     }
