@@ -4,8 +4,7 @@ class Boulle extends Component{
     constructor(props){
         super.props();
         this.state={
-            lienMusique: ""
-
+            lienMusique: "",
         }
         this.handleChange = this.handleChange.bind(this);    
     }
@@ -21,7 +20,8 @@ handleChange(event){
 
 
     render(){
-    const BoulleAdd = <li><input type="text" value={this.state.value} onChange={this.handleChange}></input></li>;
+    const BoulleAdd = <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange}></input>
+    </label><input type="submit" value="Valider" onClick={}> </li>;
 
         return(
             {BoulleAdd}
