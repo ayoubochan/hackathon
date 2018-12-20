@@ -17,7 +17,6 @@ handleChange(event){
 handleClick(elem){
     this.props.activateUrl(elem);
 }
-<Boulle recupURL= recupURL()/>
 
     render(){
     const BoulleAdd = <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange}></input>
