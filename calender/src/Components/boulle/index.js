@@ -1,31 +1,34 @@
-import React, {Component} from react;
+import React, { Component } from 'react';
+import './index.css'
 
-class Boulle extends Component{
-    constructor(props){
-        super.props();
-        this.state={
+class Boule extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             lienMusique: "",
+            open: false
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleClick = this.handleClick.bind(this)    
+        this.handleClick = this.handleClick.bind(this)
     }
-    
-handleChange(event){
-    this.setState({lienMusique :event.target.value});
-}
 
-handleClick(elem){
-    this.props.activateUrl(elem);
-}
+    handleChange(event) {
+        this.setState({ lienMusique: event.target.value });
+    }
 
-    render(){
-    const BoulleAdd = <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange}></input>
-    </label><input type="submit" value="Valider" onClick={() =>this.handleClick(this.state.lienMusique)}> </li>;
+    handleClick(elem) {
+        this.props.activateUrl(elem);
+    }
 
-        return(
-            {BoulleAdd}
+
+    render() {
+        return (
+            
+                            <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange} />
+                            </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
+                      
         );
     }
 }
 
-export default Boulle
+export default Boule;
