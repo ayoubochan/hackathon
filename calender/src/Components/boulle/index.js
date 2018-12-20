@@ -25,12 +25,13 @@ class Boule extends Component {
     handleClick(elem) {
         this.props.activateChange(elem);
         this.props.activateUrl(elem);
-        this.setState(this.baseState)
+        this.setState(this.baseState);
+
     }
     render() {
         return (
             <li><span>{this.props.date}</span>
-            <label>Inserez un titre<input type="text" value={this.state.value} onChange={(event) =>this.handleChangeLien(event)} />
+            <label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={(event) =>this.handleChangeLien(event)} />
             Inserez la réponsse attendue <input type='text' value={ this.state.value} onChange={(event) =>this.handleChange(event)} />
             </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state)} /> </li>
         );
