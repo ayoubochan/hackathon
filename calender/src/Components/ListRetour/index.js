@@ -38,6 +38,13 @@ class ListRetour extends Component{
         }
     }
 
+    dateChange(ev) {
+        this.setState({
+            debut: this.state.debut + 1,
+            fin: this.state.fin + 1
+        })
+    }
+
     render(){
         return(
             <ul>
