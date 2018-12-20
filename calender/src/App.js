@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Background from './Components/Background/index';
 import BouleList from "./Components/BouleList/index"
 import Popup from './Components/Popup/index';
