@@ -1,23 +1,58 @@
+
 .radio{
     width: 100%;
 }
 
 .red{
     background-image: url('https://i.goopics.net/oxDr7.jpg');
+    height: 100vh;
+    
 }
 
 .green{
-    background-image: url('https://i.goopics.net/8Ye4p.jpg')
+    background-image: url('https://i.goopics.net/8Ye4p.jpg');
+    height: 100vh;
 }
 
 .square{
-    background-image: url('https://i.goopics.net/0nY9q.jpg')
+    background-image: url('https://i.goopics.net/0nY9q.jpg');
+    height: 100vh;
 }
 
 .multi{
-    background-image: url('https://i.goopics.net/2GVee.jpg')
+    background-image: url('https://i.goopics.net/2GVee.jpg');
+    height: 100vh;
 }
 
 .yellow{
-    background-image: url('https://i.goopics.net/qLDyJ.jpg')
+    background-image: url('https://i.goopics.net/qLDyJ.jpg');
+    height: 100vh;
+}
+
+
+.title-calender{
+    margin-top: 0px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+@media screen and (min-width: 780px){
+    .red{
+        height: auto;   
+    }
+    .green{
+        height: auto;
+    }
+    .square{
+        height: auto;
+    }
+    .multi{
+        height: auto;
+    }
+    .yellow{
+        height: auto;
+    }
+    .radio{
+        width: 100%;
+    }
 }

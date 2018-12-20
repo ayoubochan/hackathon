@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Background from './components/Background/index';
+/*import BouleList from "./Components/BouleList/index"
+import Popup from './Components/Popup/index';
+import Boule from './Components/boulle/index';*/
+
 
 class App extends Component {
   constructor(props){
@@ -19,11 +24,13 @@ class App extends Component {
   render() {
     return (
       <div className={this.state.img}>
-      <h1> Blank Test Calender !</h1>
-      <img src="https://i.goopics.net/r5DWm.png" alt="radio" className = "radio"></img>
-
+      <h1 className = 'title-calender'> Blank Test Calender !</h1>
       <Background handleNameChange={(className) => this.handleNameChange(className)}/>
-        
+      <img src="https://i.goopics.net/LOn4W.png" alt="radio" className = "radio"></img>
+
+  
+      {/*<BouleList />
+    <Popup />*/}
       </div>
     );
   }

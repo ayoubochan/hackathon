@@ -1,8 +1,32 @@
+.title-paterns{
+text-align: center;
+}
+
 .paterns{
     list-style-type:none;
     display:flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    margin-left: -40px;
+    
 }
 
+
+.patern-item{
+    margin: 5px;
+}
+
+.thubnail{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 900px){
+    .paterns{
+        justify-content: none;
+        margin-left: 60%;  
+    }
+    .title-paterns{
+        margin-left: 60%;  
+        }
+}
 
