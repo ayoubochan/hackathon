@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import "./index.css"
+import "./index.css";
 
 let tableRandomNumbers= []
+let lienGenere ='' ;
 
 class GenerateRadioButton extends Component{
     constructor(props){
@@ -10,13 +11,12 @@ class GenerateRadioButton extends Component{
                 suiteNombre: []
             }
         }
-   
+   /// ENVOIE VERS BOULES LISTE
         transferLink(elem){
             this.props.activateShare(elem)
-            console.log(elem, "ok")
         }
-
-        genereNombre(ev){
+    /// GENERE 10 NOMBRES ALEATOIRES
+        genereNombre(){
             tableRandomNumbers = []
             for(let i = 0; i < 10; i++){
                 tableRandomNumbers.push(Math.round(Math.random() * 10))
@@ -24,10 +24,21 @@ class GenerateRadioButton extends Component{
             return this.transferLink(tableRandomNumbers.join(""))
         }
 
+    /// GENERE UN LIEN
+        genereLien(){
+            return ('link for your radio blindtest: PageRetour/' + tableRandomNumbers.join(""));
+        }
+
+        handleClick(ev){
+            this.genereNombre(ev);
+            lienGenere = this.genereLien();
+        }
+
     render(){
         return(
             <div>
-                <button onClick={(ev) => this.genereNombre(ev)}> Créer ma radion blind test</button>
+                <button onClick={(ev) => this.handleClick(ev)}> Créer ma radion blind test</button>
+                <span>{lienGenere}</span>
             </div>
         );
     }
