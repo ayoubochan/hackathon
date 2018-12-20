@@ -1,4 +1,6 @@
-import React, {Component} from 'reac';
+import React, {Component} from 'react';
+
+let tableRandomNumbers= []
 
 class GenerateRadioButton extends Component{
     constructor(props){
@@ -8,16 +10,22 @@ class GenerateRadioButton extends Component{
             }
         }
 
-        genereNombre(){
-            for(let i = 0; i>10; i++){
-               this.setState.suiteNombre.push(Math.random() * 10);
+        genereNombre(ev){
+            for(let i = 0; i<10; i++){
+                tableRandomNumbers.push(Math.round(Math.random() * 10))
             }
+            this.setState({
+                suiteNombre : tableRandomNumbers
+            });
         }
 
     render(){
-        this.genereNombre()
         return(
-            <div> console.log('boutton genereRadio in return ===>',this.state)</div>
+            <div>
+                <button onClick={(ev) => this.genereNombre(ev)}> Créer ma radion blind test</button>
+            </div>
         );
     }
 }
+
+export default GenerateRadioButton;
