@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./index.css"
 
 let tableRandomNumbers= []
 
@@ -9,14 +10,18 @@ class GenerateRadioButton extends Component{
                 suiteNombre: []
             }
         }
+   
+        transferLink(elem){
+            this.props.activateShare(elem)
+            console.log(elem, "ok")
+        }
 
         genereNombre(ev){
-            for(let i = 0; i<10; i++){
+            tableRandomNumbers = []
+            for(let i = 0; i < 10; i++){
                 tableRandomNumbers.push(Math.round(Math.random() * 10))
             }
-            this.setState({
-                suiteNombre : tableRandomNumbers
-            });
+            return this.transferLink(tableRandomNumbers.join(""))
         }
 
     render(){
