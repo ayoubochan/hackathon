@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import "./index.css"
-import BoulleRetour from "../..Components/BoulleRetour/index"
+import BoulleRetour from "../../Components/BoulleRetour/index"
 
 const dates = [
     {date: "01/12"},

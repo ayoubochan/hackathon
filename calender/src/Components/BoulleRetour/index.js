@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import "./index.css"
 
 class BoulleRetour extends Component{
-    cosntructor(props){
+    constructor(props){
         super(props)
         this.state={
             reponse: '',
@@ -18,3 +19,5 @@ class BoulleRetour extends Component{
         )
     }
 }
+
+export default BoulleRetour
