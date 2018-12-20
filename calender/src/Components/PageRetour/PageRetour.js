@@ -1,26 +1,15 @@
 import React, {Component} from 'react';
+import ListeRetour from './Component/ListeRetour';
+import PopUpRetour from './Component/PopUpRetour'
 
 class PageRetour extends Component{
-    constructor(props){
-        super(props)
-        this.state={
-            liensYoutube: [],
-            date: []
-        }
-    }
-
-    fetch()
-    
-    componentDidMount(){
-        this.setState({
-            liensYoutube: 
-            date: 
-        })
-    }
 
     render(){
         return(
-            <div></div>
+            <div>
+                <ListeRetour />
+                <PopUpRetour />
+            </div>
         )
     }
 }
