@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import BouleList from "./Components/BouleList/index"
-import Popup from './components/Popup/index';
+import Popup from './Components/Popup/index';
 import Boule from './Components/boulle/index';
 
 class App extends Component {
