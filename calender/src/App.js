@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Popup from './components/Popup/index';
+import Popup from './Components/Popup/index';
 import Boule from './Components/boulle/index';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
