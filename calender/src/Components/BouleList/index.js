@@ -4,6 +4,7 @@ import GenerateRadioButton from "../../Components/bouttonGenerRadio/index"
 
 let table = []
 let table2 = []
+let tableReponses = []
 
 const Boules = [
     {date: "01/12"},
@@ -39,7 +40,8 @@ class BouleList extends Component{
             youtubeLink: [],
             debut: 0,
             fin: 1,
-            shareLink: []
+            shareLink: [],
+            reponses: []
         }
     }
 
@@ -51,19 +53,24 @@ class BouleList extends Component{
     }
 
     recupURL(elem){
-        table.push(elem)
+        tableReponses.push(elem.reponse)
+        table.push(elem.lienMusique)
         this.setState({
-            youtubeLink: table
+            youtubeLink: table,
+            reponses : tableReponses
         })
     }
 
     stockLink(elem){
         table2.push(elem)
         this.setState({
-            shareLink: table2
+            shareLink: table2,
         })
         console.log(this.state.shareLink)
     }
+componentDidUpdate(){
+    console.log('TEST envoi de reponse', this.state)
+}
 
     render(){
         return(
