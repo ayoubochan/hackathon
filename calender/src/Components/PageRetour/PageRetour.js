@@ -4,10 +4,20 @@ class PageRetour extends Component{
     constructor(props){
         super(props)
         this.state={
-            liensYoutube: []
+            liensYoutube: [],
+            date: []
         }
     }
+
+    fetch()
     
+    componentDidMount(){
+        this.setState({
+            liensYoutube: 
+            date: 
+        })
+    }
+
     render(){
         return(
             <div></div>

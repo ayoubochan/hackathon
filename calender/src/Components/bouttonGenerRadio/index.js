@@ -13,7 +13,6 @@ class GenerateRadioButton extends Component{
    
         transferLink(elem){
             this.props.activateShare(elem)
-            console.log(elem, "ok")
         }
 
         genereNombre(ev){
