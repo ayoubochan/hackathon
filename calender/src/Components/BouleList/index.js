@@ -66,7 +66,7 @@ class BouleList extends Component{
         this.setState({
             shareLink: table2,
         })
-        console.log(this.state.shareLink)
+        console.log('OKOKOKOKO',this.state.shareLink)
     }
 componentDidUpdate(){
     console.log('TEST envoi de reponse', this.state)

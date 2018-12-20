@@ -7,10 +7,12 @@ class Boule extends Component {
         this.state = {
             lienMusique: "",
             open: false,
-            reponse:""
+            reponse:"",
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this)
+
+        this.baseState = this.state 
     }
 
     handleChange(event) {
@@ -23,6 +25,7 @@ class Boule extends Component {
     handleClick(elem) {
         this.props.activateChange(elem);
         this.props.activateUrl(elem);
+        this.setState(this.baseState)
     }
     render() {
         return (
