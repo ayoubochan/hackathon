@@ -5,7 +5,7 @@ class Background extends Component{
     constructor(props){
         super(props);
         this.state = {
-            img : "red",
+            img : "green",
         }
     }
 
