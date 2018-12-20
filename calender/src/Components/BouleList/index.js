@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 import Boulle from "../../Components/boulle/index"
 
+let table = []
+
 const Boules = [
     {date: "01/12"},
     {date: "02/12"},
@@ -33,26 +35,29 @@ class BouleList extends Component{
         super(props);
         this.state = {
             youtubeLink: [],
-            date: 1
+            debut: 0,
+            fin: 1
         }
     }
 
     dateChange(ev){
         this.setState({
-            date: this.state.date + 1
+            debut: this.state.debut + 1,
+            fin: this.state.fin + 1
         })
     }
 
     RecupURL(elem){
+        table.push(elem)
         this.setState({
-            youtubeLink: this.state.youtubeLink.push(elem)
+            youtubeLink: table
         })
     }
 
     render(){
         return(
             <ul>
-                {Boules.map((elem, index) => (
+                {Boules.slice(this.state.debut, this.state.fin).map((elem, index) => (
                 <Boulle key={index} date={elem.date} activateUrl={(elem) => this.RecupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
             ))}
                
