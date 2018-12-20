@@ -23,8 +23,8 @@ class Boule extends Component {
     }
     render() {
         return (
-            <span>{this.props.date}</span>
-            <li><label>Inserez un titre<input type="text" value={this.state.value} onChange={this.handleChange} />
+            <li><span>{this.props.date}</span>
+            <label>Inserez un titre<input type="text" value={this.state.value} onChange={this.handleChange} />
             </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
         );
     }
