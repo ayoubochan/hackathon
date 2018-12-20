@@ -1,7 +1,9 @@
 import React, {Component} from "react"
 import Boulle from "../../Components/boulle/index"
+import GenerateRadioButton from "../../Components/bouttonGenerRadio/index"
 
 let table = []
+let table2 = []
 
 const Boules = [
     {date: "01/12"},
@@ -36,7 +38,8 @@ class BouleList extends Component{
         this.state = {
             youtubeLink: [],
             debut: 0,
-            fin: 1
+            fin: 1,
+            shareLink: []
         }
     }
 
@@ -47,19 +50,29 @@ class BouleList extends Component{
         })
     }
 
-    RecupURL(elem){
+    recupURL(elem){
         table.push(elem)
         this.setState({
             youtubeLink: table
         })
     }
 
+    stockLink(elem){
+        table2.push(elem)
+        this.setState({
+            shareLink: table2
+        })
+        console.log(this.state.shareLink)
+    }
+
     render(){
         return(
             <ul>
                 {Boules.slice(this.state.debut, this.state.fin).map((elem, index) => (
-                <Boulle key={index} date={elem.date} activateUrl={(elem) => this.RecupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
+                <Boulle key={index} date={elem.date} activateUrl={(elem) => this.recupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
             ))}
+
+                <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)}/>
                
             </ul>
         )
