@@ -6,7 +6,8 @@ class Boule extends Component {
         super(props);
         this.state = {
             lienMusique: "",
-            open: false
+            open: false,
+            date: ''
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this)
@@ -17,16 +18,14 @@ class Boule extends Component {
     }
 
     handleClick(elem) {
+        this.props.activateChange(elem);
         this.props.activateUrl(elem);
     }
-
-
     render() {
         return (
-            
-                            <li><label>Inserez un lien youtube<input type="text" value={this.state.value} onChange={this.handleChange} />
-                            </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
-                      
+            <li><span>{this.props.date}</span>
+            <label>Inserez un titre<input type="text" value={this.state.value} onChange={this.handleChange} />
+            </label><input type="submit" value="Valider" onClick={() => this.handleClick(this.state.lienMusique)} /> </li>
         );
     }
 }
