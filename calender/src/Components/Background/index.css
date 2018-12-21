@@ -1,12 +1,23 @@
+.container-patern{
+    background-color: #ffffff7e;
+    border-radius:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+
 .title-paterns{
 text-align: center;
+font-family: chopinScript;
+font-size: 30px;
 }
 
 .paterns{
     list-style-type:none;
     display:flex;
     justify-content: center;
-    margin-left: -40px;
+    padding: 0;
+    
     
 }
 
@@ -20,13 +31,4 @@ text-align: center;
     height: 50px;
 }
 
-@media screen and (min-width: 900px){
-    .paterns{
-        justify-content: none;
-        margin-left: 60%;  
-    }
-    .title-paterns{
-        margin-left: 60%;  
-        }
-}
 

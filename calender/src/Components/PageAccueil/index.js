@@ -3,6 +3,7 @@ import "./index.css"
 import Background from '../../Components/Background/index';
 import BouleList from "../../Components/BouleList/index"
 import Popup from '../../Components/Popup/index';
+import radio from '../../assets/images/radio.png'
 
 class PageAccueil extends Component{
     constructor(props){
@@ -21,12 +22,17 @@ class PageAccueil extends Component{
     render(){
         return(
             <div className={this.state.img}>
-            <h1 className = 'title-calender'> Blank Test Calender !</h1>
-            <Background handleNameChange={(className) => this.handleNameChange(className)}/>
-            <img src="https://i.goopics.net/LOn4W.png" alt="radio" className = "radio"></img>
+              
+              <Background handleNameChange={(className) => this.handleNameChange(className)}/>
 
-        
-            <BouleList />
+              <div className="container-image">
+                <img src={radio} alt="radio" className = "radio"></img>
+                <BouleList />
+              
+              </div> 
+              
+           
+
             <Popup />
             </div>    
         )

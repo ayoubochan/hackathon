@@ -1,0 +1,98 @@
+.title-calender{
+border-radius:20px;
+text-align: center;
+}
+
+.container-image{
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    margin: 10px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.radio{
+    position: relative;
+    width: 100%;
+    transform: translate(-50%);
+    left: 50%;
+    z-index: 2;
+
+
+}
+
+
+.contenaire-app{
+    height: 1vh;
+}
+
+
+
+.red{
+    position: relative;
+    background-image: url('https://i.goopics.net/oxDr7.jpg');
+    height: 100vh;
+    
+}
+
+.green{
+    position: relative;
+    background-image: url('https://i.goopics.net/8Ye4p.jpg');
+    height: 100vh;
+}
+
+.square{
+    position: relative;
+    background-image: url('https://i.goopics.net/0nY9q.jpg');
+    height: 100vh;
+}
+
+.multi{
+    position: relative;
+    background-image: url('https://i.goopics.net/2GVee.jpg');
+    height: 100vh;
+}
+
+.yellow{
+    background-image: url('https://i.goopics.net/qLDyJ.jpg');
+    height: 100vh;
+}
+
+
+.title-calender{
+    margin-top: 0px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 780px){
+    .red{
+        height: auto;   
+    }
+    .green{
+        height: auto;
+    }
+    .square{
+        height: auto;
+    }
+    .multi{
+        height: auto;
+    }
+    .yellow{
+        height: auto;
+    }
+    
+}
+
+@media screen and (min-width: 700px){
+    .container-image{
+        margin: 5% auto;
+        width: calc(100% - 20%);
+        max-width: 820px;
+
+    }
+}
+
