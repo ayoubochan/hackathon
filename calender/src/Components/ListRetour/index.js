@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import "./index.css"
-import BoulleRetour from "../..Components/BoulleRetour/index"
+import BoulleRetour from "../../Components/BoulleRetour/index"
 
 const dates = [
     {date: "01/12"},
@@ -36,6 +36,13 @@ class ListRetour extends Component{
             debut: 0,
             fin: 1
         }
+    }
+
+    dateChange(ev) {
+        this.setState({
+            debut: this.state.debut + 1,
+            fin: this.state.fin + 1
+        })
     }
 
     render(){
