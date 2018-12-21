@@ -9,11 +9,7 @@ class GenerateRadioButton extends Component{
         super(props)
             this.state={
                 suiteNombre: [],
-<<<<<<< HEAD
-                id: 1,
-=======
                 id: 2
->>>>>>> 0f2f2854b4333d6e7f2f5da41b8dda2abd53541a
             }
         }
    /// ENVOIE VERS BOULES LISTE
