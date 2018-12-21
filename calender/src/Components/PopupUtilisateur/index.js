@@ -18,12 +18,13 @@ class PopupUtilisateur extends Component {
     render() {
         return (
             <div className={this.state.isOpen ? 'popup' : ' close'}>
-                <h3>Hello !</h3>
+                <h1 className="welcome">You have been chosen by one of your friends to pass the Advent Calendet Blank Challenge!</h1>
+                <h2> What de you need to do:</h2>
                 <button className="closewindow" onClick={() => this.handleClick()}>X</button>
                 <div className="flex-container">
-                        <p className="option">1</p>
-                        <p className="option">2</p>
-                        <p className="option">3</p>
+                    
+                        <p className="option"><strong>Step 1</strong>: <br /> <br />Push on play and listen to the music</p>
+                        <p className="option"><strong>Step 2</strong> :<br /> <br />Find the name of the music and write it in the radio</p>
                 </div>
             </div>
         )
