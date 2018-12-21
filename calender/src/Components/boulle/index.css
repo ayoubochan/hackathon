@@ -21,7 +21,8 @@
 }
 
 .date{
-    font-size: 10px;
+    font-family: chopinScript;
+    font-size: 20px;
     color: green;
     display: block;
     text-align: center;
