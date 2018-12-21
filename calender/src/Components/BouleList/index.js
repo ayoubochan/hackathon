@@ -40,7 +40,8 @@ class BouleList extends Component {
             debut: 0,
             fin: 1,
             shareLink: '',
-            calendarContent: []
+            calendarContent: [],
+            id: ""
         }
     }
    
@@ -80,7 +81,7 @@ class BouleList extends Component {
     recupURL(elem) {
         console.log(this.state.calendarContent)
         this.setState({
-            calendarContent  : [...this.state.calendarContent, [elem.lienMusique, elem.reponse]]
+            calendarContent  : [...this.state.calendarContent, [elem.lienMusique, elem.reponse, this.state.id]]
         })
     }
 
@@ -90,10 +91,18 @@ class BouleList extends Component {
         })
     }
 
+    stockID(elem){
+        this.setState({
+            id:elem
+        })
+    }
+
     componentDidUpdate(prevProps, prevState){
-        if(prevState.shareLink !== this.state.shareLink){
+        console.log(this.state.id, 'icccciiii')
+        if(prevState.shareLink !== this.state.shareLink && prevState.id !== this.state.id){
             this.addLink()
         }
+        
     }
 
     render() {
@@ -103,7 +112,7 @@ class BouleList extends Component {
                     <Boulle key={index} date={elem.date} activateUrl={(elem) => this.recupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
                 ))}
 
-                <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} />
+                <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} activateID={(elem) => this.stockID(elem)} />
 
             </ul>
         )

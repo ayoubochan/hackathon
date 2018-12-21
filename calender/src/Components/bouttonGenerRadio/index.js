@@ -16,6 +16,8 @@ class GenerateRadioButton extends Component{
         transferLink(elem){
             this.props.activateShare(elem)
         }
+
+
     /// GENERE 10 NOMBRES ALEATOIRES
         genereNombre(){
             tableRandomNumbers = []
@@ -36,6 +38,7 @@ class GenerateRadioButton extends Component{
             this.setState({
                 id: this.state.id +1
             })
+            this.props.activateID(this.state.id)
         }
 
     render(){

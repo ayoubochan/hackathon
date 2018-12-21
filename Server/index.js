@@ -29,7 +29,7 @@ app.post('/api/partagelink/add', (req, res) => {
 
 app.post('/api/calendrier/youtube/add', (req, res) => {
     const formData = req.body;    
-    connexion.query('INSERT INTO youtube (Link, Reponse) VALUES ?', [formData],  (err, results) => {
+    connexion.query('INSERT INTO youtube (Link, Reponse, ID_partagelink) VALUES ?', [formData],  (err, results) => {
         if(err) {
             return res.status(500).send("Erreur lors de la sauvegarde");
         }else {
