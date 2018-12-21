@@ -50,16 +50,15 @@ class BoulleRetour extends Component {
         })
         this.compareReponse()
     }
-
     render() {
         const video = this.state.youtube.map((elem, index) => <Video
             key={index} rep={elem.Reponse} video={ elem.Link.substring(32, 43) + '?start=10&end=20' + ';version=3&enablejsapi=1'} />);
         return (
-            <li><span>{this.props.date}</span>
+            <li className="affiche-date"><span className="date">{this.props.date}</span>
                 {video[this.state.number]}
                 <span>Donne ta réponse</span>
                 <input type="text" onChange={this.state.reponse} />
-                <button onClick={(ev) => this.transfer(ev)}>Ok</button>
+                <button onClick={(ev) => this.transfer(ev)} className="bouton-valider" >Ok</button>
             </li>
         )
     }

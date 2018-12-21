@@ -24,6 +24,9 @@ class Background extends Component{
     render (){
         return(
             <div className={this.state.img ? 'open' : 'close'}>
+            <div className="container-patern">
+            <h1 className = 'title-calender'> Blank Test Calender !</h1>
+
             <p className="title-paterns"> Choose your template here </p>
                 <ul className = "paterns">
                     <li className ="patern-item"> 
@@ -52,6 +55,7 @@ class Background extends Component{
                         </button>
                     </li>
                 </ul>
+            </div>
 
             </div>
         );
