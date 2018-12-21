@@ -9,13 +9,19 @@ class GenerateRadioButton extends Component{
         super(props)
             this.state={
                 suiteNombre: [],
+<<<<<<< HEAD
                 id: 1,
+=======
+                id: 2
+>>>>>>> 0f2f2854b4333d6e7f2f5da41b8dda2abd53541a
             }
         }
    /// ENVOIE VERS BOULES LISTE
         transferLink(elem){
             this.props.activateShare(elem)
         }
+
+
     /// GENERE 10 NOMBRES ALEATOIRES
         genereNombre(){
             tableRandomNumbers = []
@@ -36,6 +42,7 @@ class GenerateRadioButton extends Component{
             this.setState({
                 id: this.state.id +1
             })
+            this.props.activateID(this.state.id)
         }
 
     render(){

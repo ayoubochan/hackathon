@@ -25,7 +25,6 @@ class Boule extends Component {
     handleClick(elem) {
         this.props.activateChange(elem);
         this.props.activateUrl(elem);
-        this.setState(this.baseState);
 
     }
     render() {

@@ -41,10 +41,11 @@ class BouleList extends Component {
             debut: 0,
             fin: 1,
             shareLink: '',
-            calendarContent: []
+            calendarContent: [],
+            id: 1
         }
     }
-   
+
     addYoutube = _ => {
         console.log('test', this.state.calendarContent)
 
@@ -65,10 +66,10 @@ class BouleList extends Component {
             headers: {
                 'Content-type': 'Application/json; charset=utf-8'
             },
-            body: JSON.stringify({Link: this.state.shareLink})
+            body: JSON.stringify({ Link: this.state.shareLink })
         })
             .then((res) => this.addYoutube())
-      
+
     }
 
     dateChange(ev) {
@@ -81,7 +82,7 @@ class BouleList extends Component {
     recupURL(elem) {
         console.log(this.state.calendarContent)
         this.setState({
-            calendarContent  : [...this.state.calendarContent, [elem.lienMusique, elem.reponse]]
+            calendarContent: [...this.state.calendarContent, [elem.lienMusique, elem.reponse, this.state.id]]
         })
     }
 
@@ -91,21 +92,28 @@ class BouleList extends Component {
         })
     }
 
-    componentDidUpdate(prevProps, prevState){
-        if(prevState.shareLink !== this.state.shareLink){
+    stockID(elem) {
+        this.setState({
+            id: elem
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.shareLink !== this.state.shareLink && prevState.id !== this.state.id) {
             this.addLink()
         }
+
     }
 
     render() {
         return (
             <React.Fragment>
-            <ul className="liste-ul">
-                {Boules.slice(this.state.debut, this.state.fin).map((elem, index) => (
-                    <Boulle key={index} date={elem.date} activateUrl={(elem) => this.recupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
-                ))}
-            </ul>
-            <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} />
+                <ul className="liste-ul">
+                    {Boules.slice(this.state.debut, this.state.fin).map((elem, index) => (
+                        <Boulle key={index} date={elem.date} activateUrl={(elem) => this.recupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
+                    ))}
+                </ul>
+                <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} activateID={(elem) => this.stockID(elem)} />
             </React.Fragment>
         )
     }
