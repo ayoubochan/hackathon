@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Boulle from "../../Components/boulle/index";
 import GenerateRadioButton from "../../Components/bouttonGenerRadio/index";
+import './index.css'
 
 let table = []
 let table2 = []
@@ -98,14 +99,14 @@ class BouleList extends Component {
 
     render() {
         return (
-            <ul>
+            <React.Fragment>
+            <ul className="liste-ul">
                 {Boules.slice(this.state.debut, this.state.fin).map((elem, index) => (
                     <Boulle key={index} date={elem.date} activateUrl={(elem) => this.recupURL(elem)} activateChange={(ev) => this.dateChange(ev)} />
                 ))}
-
-                <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} />
-
             </ul>
+            <GenerateRadioButton activateShare={(elem) => this.stockLink(elem)} />
+            </React.Fragment>
         )
     }
 }

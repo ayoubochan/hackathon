@@ -20,7 +20,7 @@ class Popup extends Component {
             <div className={this.state.isOpen ? 'popup' : ' close'}>
                 <h1 className="welcome">Are you ready to challenge your friends with the Blank Test Advent Calender?</h1>
                 <h2> Here are the instructions in 4 steps!</h2>
-                <button className="closewindow" onClick={() => this.handleClick()}>X</button>
+                <button className="closewindow" onClick={() => this.handleClick()}>GO !</button>
                 <div className="flex-container">
                     
                         <p className="option"><strong>Step 1</strong>: <br /> <br />Choose your calender background</p>

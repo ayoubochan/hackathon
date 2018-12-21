@@ -15,10 +15,10 @@ class BoulleRetour extends Component{
 
     render(){
         return(
-            <li><span>{this.props.date}</span>
+            <li className="affiche-date"><span className="date">{this.props.date}</span>
                 <span>Donne ta réponsse</span>
                     <input type="text" onChange={this.state.reponse} />
-                    <button onClick={(ev) => this.transfer(ev)}>Ok</button>
+                    <button onClick={(ev) => this.transfer(ev)} className="bouton-valider" >Ok</button>
             </li>
         )
     }
