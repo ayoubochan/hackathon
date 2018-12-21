@@ -20,7 +20,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/" component={PageAccueil} exact/>
-            <Route path="/retour" component={PageRetour}/>
+            <Route path="/retour/:combinaison/:id" component={PageRetour}/>
           </Switch>
         </BrowserRouter>
       </div>
