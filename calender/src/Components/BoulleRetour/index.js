@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./index.css";
+import Video from '../Video/index';
 import { withRouter } from "react-router";
 
 class BoulleRetour extends Component {
@@ -51,8 +52,8 @@ class BoulleRetour extends Component {
     }
 
     render() {
-        const video = this.state.youtube.map((elem, index) => <div
-            key={index} rep={elem.Reponse}> Vidéo : {elem.Link} </div>);
+        const video = this.state.youtube.map((elem, index) => <Video
+            key={index} rep={elem.Reponse} video={elem.Link.substring(32, 43)}/>);
         return (
             <li><span>{this.props.date}</span>
                 {video[this.state.number]}

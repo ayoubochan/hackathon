@@ -98,7 +98,6 @@ class BouleList extends Component {
     }
 
     componentDidUpdate(prevProps, prevState){
-        console.log(this.state.id, 'icccciiii')
         if(prevState.shareLink !== this.state.shareLink && prevState.id !== this.state.id){
             this.addLink()
         }
