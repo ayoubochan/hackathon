@@ -8,7 +8,8 @@ class GenerateRadioButton extends Component{
     constructor(props){
         super(props)
             this.state={
-                suiteNombre: []
+                suiteNombre: [],
+                id: 0
             }
         }
    /// ENVOIE VERS BOULES LISTE
@@ -26,12 +27,15 @@ class GenerateRadioButton extends Component{
 
     /// GENERE UN LIEN
         genereLien(){
-            return ('link for your radio blindtest: PageRetour/' + tableRandomNumbers.join(""));
+            return ('link for your radio blindtest: localhost:3000/retour/' + tableRandomNumbers.join("") + '/' + this.state.id);
         }
 
         handleClick(ev){
             this.genereNombre(ev);
             lienGenere = this.genereLien();
+            this.setState({
+                id: this.state.id +1
+            })
         }
 
     render(){
