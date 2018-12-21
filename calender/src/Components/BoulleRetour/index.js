@@ -50,11 +50,10 @@ class BoulleRetour extends Component {
         })
         this.compareReponse()
     }
-    BloqueVideo(){
 
     render() {
         const video = this.state.youtube.map((elem, index) => <Video
-            key={index} rep={elem.Reponse} video={  elem.Link.substring(32, 43) + '?start=10&end=20'} />);
+            key={index} rep={elem.Reponse} video={ elem.Link.substring(32, 43) + '?start=10&end=20' + ';version=3&enablejsapi=1'} />);
         return (
             <li><span>{this.props.date}</span>
                 {video[this.state.number]}

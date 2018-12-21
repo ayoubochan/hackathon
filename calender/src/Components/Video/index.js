@@ -13,7 +13,7 @@ class Video extends Component{
     render(){
         const opts = {
             height: '30',
-            width: '40',
+            width: '30',
             playerVars: { 
               autoplay: 1
             }
