@@ -6,9 +6,9 @@ class BoulleRetour extends Component {
         super(props)
         this.state = {
             id: 1,
-            date: '',
             youtube: [],
-            number: 0
+            number: 0,
+            reponse: ''
         }
     }
 
@@ -22,6 +22,22 @@ class BoulleRetour extends Component {
                 console.log(data.data)
             })
     }
+/// On compare les réponses, on appelle la fonction seulement quand le composant est update
+ /*   compareReponse(){
+        if(this.state.reponse === data.response){
+            return 'Bien joué';
+        }
+        else{
+            return 'mauvaise réponse';
+        }
+    }
+*/
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.number !== this.state.number){
+     //       compareReponse()
+        }
+    }
+
 
     transfer(ev) {
         this.props.activateChange(ev)
