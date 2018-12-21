@@ -10,14 +10,10 @@ class Video extends Component{
         }
     }
 
-    componentDidMount() {
-        return this.props.video
-    }
-
     render(){
         const opts = {
-            height: '390',
-            width: '640',
+            height: '30',
+            width: '40',
             playerVars: { 
               autoplay: 1
             }

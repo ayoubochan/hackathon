@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import "./index.css"
 import ListRetour from "../../Components/ListRetour/index"
-import Video from "../../Components/Video/index"
 
 class PageRetour extends Component{
     constructor(props){
@@ -14,7 +13,6 @@ class PageRetour extends Component{
     render(){
         return(
             <div>
-                <Video />
                 <ListRetour />
             </div>
         )
