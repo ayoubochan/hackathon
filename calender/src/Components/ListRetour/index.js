@@ -55,8 +55,9 @@ class ListRetour extends Component{
                 {dates.slice(this.state.debut, this.state.fin).map((elem, index) => (
                 <BoulleRetour key={index} date={elem.date} activateChange={(ev) => this.dateChange(ev)} />
             ))}
-
-            <button>Go listen your Playlist !</button>
+            <div className ="butto-container">
+            <button className="link">Go listen your Playlist !</button>
+            </div>
             </ul>
         )
     }

@@ -9,7 +9,7 @@ class GenerateRadioButton extends Component{
         super(props)
             this.state={
                 suiteNombre: [],
-                id: 1
+                id: 2
             }
         }
    /// ENVOIE VERS BOULES LISTE
@@ -17,9 +17,6 @@ class GenerateRadioButton extends Component{
             this.props.activateShare(elem)
         }
 
-        transfertID(){
-            this.props.activateID(this.state.id)
-        }
 
     /// GENERE 10 NOMBRES ALEATOIRES
         genereNombre(){
@@ -38,17 +35,17 @@ class GenerateRadioButton extends Component{
         handleClick(ev){
             this.genereNombre(ev);
             lienGenere = this.genereLien();
-            this.transfertID();
             this.setState({
                 id: this.state.id +1
             })
+            this.props.activateID(this.state.id)
         }
 
     render(){
         return(
-            <div>
-                <button onClick={(ev) => this.handleClick(ev)}> Créer ma radion blind test</button>
-                <span>{lienGenere}</span>
+            <div className ="butto-container">
+                <button onClick={(ev) => this.handleClick(ev)} className="link">Generate my Calendar</button>
+                <span className = "div-lien">{lienGenere}</span>
             </div>
         );
     }

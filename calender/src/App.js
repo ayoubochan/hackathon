@@ -16,7 +16,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='contenaire-app'>
         <BrowserRouter>
           <Switch>
             <Route path="/" component={PageAccueil} exact/>

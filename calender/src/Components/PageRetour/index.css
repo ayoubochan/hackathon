@@ -1,0 +1,62 @@
+.title-calender{
+    border-radius:20px;
+    text-align: center;
+    }
+    
+    .container-image{
+        position: relative;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        margin: 10px;
+        box-sizing: border-box;
+        display: block;
+    }
+    
+    .radio{
+        position: relative;
+        width: 100%;
+        transform: translate(-50%);
+        left: 50%;
+        z-index: 2;
+    
+    
+    }
+    
+    
+    .contenaire-app{
+        height: 1vh;
+    }
+    
+    
+    
+    .title-calender{
+        margin-top: 0px;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .background-yellow{
+        background-image: url('https://i.goopics.net/qLDyJ.jpg');
+        height: 100vh;
+
+    }
+
+    .container-patern{
+        background-color: #ffffff7e;
+        border-radius:20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+       
+    }
+    
+    
+    @media screen and (min-width: 700px){
+        .container-image{
+            margin: 5% auto;
+            width: calc(100% - 20%);
+            max-width: 820px;
+    
+        }
+    }
+    
+    

@@ -24,6 +24,9 @@ class Background extends Component{
     render (){
         return(
             <div className={this.state.img ? 'open' : 'close'}>
+            <div className="container-patern">
+            <h1 className = 'title-calender'> Blank Test Calender !</h1>
+
             <p className="title-paterns"> Choose your template here </p>
                 <ul className = "paterns">
                     <li className ="patern-item"> 
@@ -33,12 +36,12 @@ class Background extends Component{
                     </li>
                     <li className ="patern-item">
                         <button onClick={() => this.handleClick('green')} className ='pattern-button'>
-                            <img src ="https://i.goopics.net/8Ye4p.jpg" alt = "green" className="thubnail" />
+                            <img src ="https://i.goopics.net/ONeXQ.jpg" alt = "green" className="thubnail" />
                         </button>
                     </li>
                     <li className ="patern-item">
                         <button onClick={() => this.handleClick('square')} className ='pattern-button'>
-                            <img src ="https://i.goopics.net/0nY9q.jpg" alt = "square" className="thubnail"/>
+                            <img src ="https://i.goopics.net/gN8de.jpg" alt = "square" className="thubnail"/>
                         </button>
                     </li>
                     <li className ="patern-item">
@@ -52,6 +55,7 @@ class Background extends Component{
                         </button>
                     </li>
                 </ul>
+            </div>
 
             </div>
         );
