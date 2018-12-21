@@ -41,7 +41,7 @@ class BouleList extends Component {
             fin: 1,
             shareLink: '',
             calendarContent: [],
-            id: ""
+            id: 1
         }
     }
    

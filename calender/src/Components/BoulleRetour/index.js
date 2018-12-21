@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import "./index.css"
+import "./index.css";
+import { withRouter } from "react-router";
 
 class BoulleRetour extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: 1,
+            id: "",
             youtube: [],
             number: 0,
             reponse: ''
@@ -13,7 +14,9 @@ class BoulleRetour extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:4000/api/calendrier/youtube?ID_partagelink=${this.state.id}`)
+        var url = this.props.location.pathname;
+        var id = url.substring(17, url.length);
+        fetch(`http://localhost:4000/api/calendrier/youtube?ID_partagelink=${id}`)
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -23,15 +26,15 @@ class BoulleRetour extends Component {
             })
     }
 /// On compare les réponses, on appelle la fonction seulement quand le composant est update
- /*   compareReponse(){
-        if(this.state.reponse === data.response){
-            return 'Bien joué';
+    compareReponse(){
+        if(this.state.reponse.includes(this.props.rep)){
+            console.log('Bien joué');
         }
         else{
-            return 'mauvaise réponse';
+           console.log('mauvaise réponse');
         }
     }
-*/
+    
     componentDidUpdate(prevProps, prevState){
         if(prevState.number !== this.state.number){
      //       compareReponse()
@@ -44,6 +47,7 @@ class BoulleRetour extends Component {
         this.setState({
             number: this.state.number + 1
         })
+        this.compareReponse()
     }
 
     render() {
@@ -60,4 +64,4 @@ class BoulleRetour extends Component {
     }
 }
 
-export default BoulleRetour
+export default withRouter(BoulleRetour);
