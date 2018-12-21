@@ -5,9 +5,7 @@ class BoulleRetour extends Component{
     constructor(props){
         super(props)
         this.state={
-            reponse: '',
-            date:'',
-            lienMusique:''
+            reponse: ''
         }
     }
 
