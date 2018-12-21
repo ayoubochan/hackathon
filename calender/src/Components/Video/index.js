@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+/*import React, {Component} from "react"
 import "./index.css"
 import YouTube from "react-youtube"
 
@@ -31,4 +31,4 @@ class Video extends Component{
     }
 }
 
-export default Video
+export default Video; */

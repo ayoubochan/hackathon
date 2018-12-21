@@ -1,3 +1,8 @@
+.welcome{
+    font-family: chopinScript;
+
+}
+
 .popup{
     position:fixed;
     top:50%;
@@ -41,10 +46,13 @@
 }
 
 .popup .closewindow {
-    position: fixed;
-    right: 0px;
-    bottom: 10px;
-    justify-content: center;
+    margin-right: 150px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    color: green;
+    border-color: green;
 }
  
 .close{

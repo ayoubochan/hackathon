@@ -44,8 +44,8 @@ class GenerateRadioButton extends Component{
     render(){
         return(
             <div className ="butto-container">
-                <button onClick={(ev) => this.handleClick(ev)} className="link">Generate my Calender</button>
-                <span>{lienGenere}</span>
+                <button onClick={(ev) => this.handleClick(ev)} className="link">Generate my Calendar</button>
+                <span className = "div-lien">{lienGenere}</span>
             </div>
         );
     }

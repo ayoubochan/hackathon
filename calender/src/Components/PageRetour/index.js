@@ -9,7 +9,9 @@ class PageRetour extends Component{
     render(){
         return(
             <div className ='background-yellow'>
-                <h1 className = 'title-calender'> Blank Test Calender !</h1>
+                <div className="container-patern">
+                    <h1 className = 'title-calender'> Blank Test Calendar !</h1>
+                </div>
                 <div className="container-image">
                     <img src={radio} alt="radio" className = "radio"></img>
                     <ListRetour />
