@@ -28,6 +28,8 @@ const dates = [
     {date: "23/12"},
     {date: "24/12"}
 ]
+let day = new Date();
+let month = new Date();
 
 class ListRetour extends Component{
     constructor(props){
@@ -39,10 +41,12 @@ class ListRetour extends Component{
     }
 
     dateChange(ev) {
-        this.setState({
-            debut: this.state.debut + 1,
-            fin: this.state.fin + 1
-        })
+        if(this.state.fin < day.getDate() && month.getMonth() === 11 ){
+            this.setState({
+                debut: this.state.debut + 1,
+                fin: this.state.fin + 1
+            })
+    }
     }
 
     render(){
